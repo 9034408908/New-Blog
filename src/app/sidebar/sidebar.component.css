@@ -1,0 +1,8 @@
+.sidebar{
+position: fixed;
+}
+ul li{
+padding-top: 16px;
+
+padding-left: 20px;
+}
