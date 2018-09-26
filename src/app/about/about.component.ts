@@ -8,9 +8,10 @@ import { Router } from '@angular/router';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(private routes:Router) { }
+  constructor(private routes:Router ) { }
 
   ngOnInit() {
+ 
   }
 public view(){
 	this.routes.navigate(["/emp"]);

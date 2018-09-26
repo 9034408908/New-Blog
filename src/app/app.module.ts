@@ -22,7 +22,7 @@ export const appRoutes: Routes = [
 
     children: [
     {
-    path: 'emp/details',
+    path: 'details',
     component: DetailsComponent
   },
     ]
@@ -35,7 +35,7 @@ export const appRoutes: Routes = [
     children: [
     {
      path: 'emp',
-    component: EmpComponent,
+    component: EmpComponent
   },
     ]
     

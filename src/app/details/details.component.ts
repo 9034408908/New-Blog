@@ -25,7 +25,7 @@ getemps(){
 	this.service.get().subscribe((add)=>{
 
   var keys=Object.keys(add);
-  this.emps=keys.map(=>(id){
+  this.emps=keys.map((id)=>{
   return{id:id, add:add[id]}
 })
   console.log(this.emps)
