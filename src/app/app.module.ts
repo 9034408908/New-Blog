@@ -9,28 +9,36 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule, Routes } from "@angular/router";
 import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http"
 
 export const appRoutes: Routes = [
   {
     path: 'details',
     component: DetailsComponent
   },
-  {
+  { 
     path: 'emp',
     component: EmpComponent,
 
-    children:[
+    children: [
     {
-    path: 'details',
+    path: 'emp/details',
     component: DetailsComponent
-  }
+  },
     ]
 
   },
   {
     path: 'about',
-    component: AboutComponent
-  }
+    component: AboutComponent,
+
+    children: [
+    {
+     path: 'emp',
+    component: EmpComponent,
+  },
+    ]
+    
   ];
 
 @NgModule({
@@ -45,7 +53,8 @@ export const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

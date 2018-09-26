@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActorService } from '../actor.service';
 
 @Component({
   selector: 'app-emp',
@@ -8,11 +9,18 @@ import { Router } from '@angular/router';
 })
 export class EmpComponent implements OnInit {
  public emp: any={};
-  constructor(private router: Router) { }
+  constructor( private router: Router, private service: ActorService ) { }
 
   ngOnInit() {
   }
-public submit(){
-	this.router.navigate(['/emp/details'])
+public submit(){	
+	this.router.navigate(["/details"]);
+	this.service.create(this.emp).subscribe(
+(add)=>{
+	console.log(this.emp);
 }
+	)
 }
+
+}
+
