@@ -11,10 +11,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EmpComponent implements OnInit {
  public emp: any={};
-  constructor( private router: Router, private service: ActorService, , private activeRoute: ActivatedRoute ) { }
+  constructor( private router: Router, private service: ActorService, private activeRoute: ActivatedRoute ) { }
 
   ngOnInit() {
-   
+
   }
 public submit(){	
 	this.router.navigate(["/details"]);
