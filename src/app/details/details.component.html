@@ -1,12 +1,12 @@
 <div class="col-md-2">
 		<app-sidebar></app-sidebar>
 	</div>
-<div class="col-md-10">
+<div class="col-md-10 data">
 <table class="table table-bordered">
-	<th>Name</th><th>Department</th>
+	<th>Name</th>	<th>Department</th>
 	<tr *ngFor="let x of emps">
-		<td>{{x.add.name}}</td>
-		<td>{{x.add.dep}}</td>
+		<td class="info">{{x.add.name}}</td>
+		<td class="success">{{x.add.dep}}</td>
 	</tr>
 </table>
 </div>
