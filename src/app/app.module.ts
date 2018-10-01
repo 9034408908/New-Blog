@@ -10,6 +10,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule, Routes } from "@angular/router";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http"
+import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
 
 export const appRoutes: Routes = [
   {
@@ -38,8 +39,9 @@ export const appRoutes: Routes = [
     component: EmpComponent
   },
     ]
+  }
     
-  ],
+  ];
 
 @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ export const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BsDatepickerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

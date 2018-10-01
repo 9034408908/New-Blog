@@ -14,7 +14,7 @@ export class EmpComponent implements OnInit {
   constructor( private router: Router, private service: ActorService, private activeRoute: ActivatedRoute ) { }
 
   ngOnInit() {
-
+ 
   }
 public submit(){	
 	this.router.navigate(["/details"]);

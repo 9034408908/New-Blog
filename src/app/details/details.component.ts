@@ -13,12 +13,12 @@ public emps: Array<any>;
   constructor( private service: ActorService ) { 
   
 	    this.emps = [];
-
+this.getemps()
 }
 
   ngOnInit() {
 
-  this.getemps()
+  
 
   }
 getemps(){

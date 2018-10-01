@@ -3,10 +3,11 @@
 	</div>
 <div class="col-md-10 data">
 <table class="table table-bordered">
-	<th>Name</th>	<th>Department</th>
+	<th>Name</th>	<th>Department</th><th>Date</th>
 	<tr *ngFor="let x of emps">
 		<td class="info">{{x.add.name}}</td>
 		<td class="success">{{x.add.dep}}</td>
+		<td>{{x.add.date}}</td>
 	</tr>
 </table>
 </div>
