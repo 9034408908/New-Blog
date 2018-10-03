@@ -1,15 +1,28 @@
+<div class=" product col-md-12">
 <div class="col-md-2">
 		<app-sidebar></app-sidebar>
 	</div>
 	<div class="col-md-10">
 	<div class="empform">
 	<div class="form-group">
-		<label>Name</label>
+		<label>Product Name</label>
 		<input [(ngModel)]="emp.name" class="form-control">
 	</div>
 	<div class="form-group">
-		<label>Department</label>
-		<input [(ngModel)]="emp.dep" class="form-control">
+    <label>Select Product</label>
+    <select [(ngModel)]="emp.sel" class="form-control">
+      <option value="Beauty">Beauty Product</option>
+      <option value="Hair">Hair Product</option>
+      <option value="Home">Home Product</option>
+    </select>
+   </div>
+	<div class="form-group">
+		<label>Product Purchase</label>
+		<input [(ngModel)]="emp.pur" class="form-control">
+	</div>
+	<div class="form-group">
+		<label>Product Sale</label>
+		<input [(ngModel)]="emp.sale" class="form-control">
 	</div>
   <div class="col-xs-12 col-12 col-md-4 form-group">
     <input [(ngModel)]="emp.date" type="text"
@@ -19,5 +32,6 @@
   </div>
 	<button (click)="submit()">Submit</button>
 	<button (click)="add()">Add Records</button>
+</div>
 </div>
 </div>

@@ -11,8 +11,7 @@ export class DetailsComponent implements OnInit {
 public emps: Array<any>;
 
   constructor( private service: ActorService ) { 
-  
-	    this.emps = [];
+this.emps = [];
 this.getemps()
 }
 
