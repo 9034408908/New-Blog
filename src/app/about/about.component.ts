@@ -14,6 +14,6 @@ export class AboutComponent implements OnInit {
  
   }
 public view(){
-	this.routes.navigate(["/emp"]);
+	this.routes.navigate(["/emp/product"]);
 }
 }

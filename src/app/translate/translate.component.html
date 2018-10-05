@@ -1,0 +1,22 @@
+<div class="rw-select-wrapper">
+  <div class="select-box">
+    <div class="select-button" (click) = "toggleSelectBox($event)">
+      <div class="text-box">
+          <span class="label">{{selectLable}}</span>
+          <span class="img"><img *ngIf ="selectedImg" [src]="selectedImg" width="20" height="20"></span>
+          <span class="unimg"><img *ngIf ="unimg" src="assets/images/united-states.png" alt="" width="20" height="20">
+          </span>
+          <span class="text">{{selectedItem}}</span>
+      </div>
+     </div>
+    <!-- <div class="search-box"></div> -->
+    <div class="rw-select-list" *ngIf = "toggleSelect">
+      <ul>
+        <li *ngFor = "let list of dataList" (click) ="selectedValue(list)" (click)="switchLanguage(list.language)" >
+          <img class="downimg" [src]="list.img" width="20" height="20">{{list.value}}
+        </li>
+       </ul>
+    </div>
+  </div>
+</div>																																
+

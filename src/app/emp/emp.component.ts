@@ -10,11 +10,32 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./emp.component.css']
 })
 export class EmpComponent implements OnInit {
+ public id: any;
  public emp: any={};
-  constructor( private router: Router, private service: ActorService, private activeRoute: ActivatedRoute ) { }
+ public emps:Array<any>;
+
+  constructor( private router: Router, private service: ActorService, private activeRoute: ActivatedRoute ) { 
+  this.emps=[];
+this.id=this.activeRoute.snapshot.params.id;
+}
 
   ngOnInit() {
- 
+ this.service.get().subscribe((add)=>{
+  var keys=Object.keys(add);
+  this.emps=keys.map((id)=>{
+  return{id:id, add:add[id]}
+})
+ console.log(this.emps)
+if(this.id!== "product"){
+for(let i=0; i < this.emps.length; i++) {
+if(this.id == this.emps[i].id){
+  this.emp = this.emps[i].add
+}
+}
+}
+
+}
+ )
   }
 public submit(){	
 	this.router.navigate(["/details"]);
@@ -24,6 +45,7 @@ public submit(){
 }
 	)
 }
+
 
 }
 
