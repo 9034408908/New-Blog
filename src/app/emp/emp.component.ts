@@ -46,6 +46,15 @@ public submit(){
 	)
 }
 
+update(){
+  this.service.update(this.id, this.emp).subscribe(
+(add)=>{
+  console.log(add)
+
+}
+  )
+}
+
 
 }
 

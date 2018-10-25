@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class DetailsComponent implements OnInit {
 public edit_id:string;
 public emps: Array<any>;
+todaydate = new Date();
 
   constructor( private service: ActorService, private router: Router ) { 
 this.emps = [];
@@ -31,5 +32,11 @@ getemps(){
 }
 edit(data){
  this.router.navigate([`/emp/${data.id}`])
+}
+delete(id){
+  this.service.delete(id).subscribe((add)=>{
+console.log(add);
+this.getemps()
+  })
 }
 }
