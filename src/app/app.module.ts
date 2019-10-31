@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { EmpComponent } from './emp/emp.component';
@@ -15,6 +16,10 @@ import { TranslateComponent } from './translate/translate.component';
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { RwSelect2Component } from './rw-select2/rw-select2.component';
+import { AddDetailComponent } from './add-detail/add-detail.component';
+import { ModifyDetailsComponent } from './modify-details/modify-details.component';
+import { GridsterModule } from 'angular-gridster2';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
     return new TranslateHttpLoader(httpClient, "./assets/i18n/", ".json");
@@ -25,7 +30,15 @@ export const appRoutes: Routes = [
     path: 'details',
     component: DetailsComponent
   },
-  { 
+  {
+    path: 'add-detail',
+    component: AddDetailComponent
+  },
+  {
+    path: 'modify-details',
+    component: AddDetailComponent
+  },
+  {
     path: 'emp/:id',
     component: EmpComponent,
 
@@ -48,7 +61,7 @@ export const appRoutes: Routes = [
   },
     ]
   }
-    
+
   ];
 
 @NgModule({
@@ -60,18 +73,23 @@ export const appRoutes: Routes = [
     HeaderComponent,
     SidebarComponent,
     TranslateComponent,
-    RwSelect2Component
+    RwSelect2Component,
+    AddDetailComponent,
+    ModifyDetailsComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
+    GridsterModule,
+    DragDropModule,
     HttpClientModule,
+    BrowserAnimationsModule ,
     BsDatepickerModule.forRoot(),
     TranslateModule.forRoot({
           loader: {
             provide: TranslateLoader,
-            useFactory: HttpLoaderFactory,                                            
+            useFactory: HttpLoaderFactory,
             deps: [HttpClient]
           }
         })

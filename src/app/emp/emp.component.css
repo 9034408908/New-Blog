@@ -1,8 +1,13 @@
-.empform{
-width: 90%;
-padding-left: 10%;
-padding-top: 1	%;
+.empform {
+    width: 90%;
+    padding-left: 10%;
+    padding-top: 1%;
 }
-.product{
-	padding-top: 10%
+
+.product {
+    padding-top: 10%
+}
+
+.aa {
+    margin-left: 10px;
 }

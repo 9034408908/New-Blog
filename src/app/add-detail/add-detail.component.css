@@ -1,0 +1,26 @@
+.empform {
+    width: 90%;
+    padding-left: 10%;
+    padding-top: 1%;
+}
+
+.product {
+    padding-top: 10%
+}
+
+.aa {
+    margin-left: 10px;
+}
+
+.glyphicon {
+    position: absolute!important;
+    top: 10px!important;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    right: 0px!important;
+}
